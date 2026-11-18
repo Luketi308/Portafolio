@@ -381,9 +381,9 @@ h3 {
 
 .timeline-card:hover {
     transform: none;
-    border-color: var(--border);
+  
+  border-color: var(--border);
 }
-
 .skill-card h3,
 .project-card h3,
 .timeline-card h3 {
