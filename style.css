@@ -275,6 +275,41 @@ h3 {
 .social-icon-none:hover {
     filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(260deg) brightness(90%);
 }
+.contenedor-titulo {
+    display: flex;
+    /* Puedes cambiar esto a 'center' si quieres el título centrado */
+    justify-content: flex-start; 
+  }
+
+  .maquina-escribir {
+    font-family: monospace;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #333; 
+    width: 0;
+    animation: 
+      escribirYBorrar 8s steps(24, end) infinite,
+      parpadearCursor 0.75s step-end infinite;
+  }
+
+  @keyframes escribirYBorrar {
+    0%, 10% {
+      width: 0;
+    }
+    45%, 65% {
+      width: 100%; 
+    }
+    90%, 100% {
+      width: 0; 
+    }
+  }
+
+  @keyframes parpadearCursor {
+    from, to { border-color: transparent; }
+    50% { border-color: #333; }
+  }
+
 
 /* =========================
    SOBRE MÍ
@@ -560,6 +595,12 @@ h3 {
    DISEÑO RESPONSIVE
    ========================= */
 @media (max-width: 900px) {
+    .maquina-escribir {
+      animation: none;
+      width: auto;
+      white-space: normal;
+      border-right: none;
+    }
     .desktop-navigation {
         gap: 14px;
     }
@@ -588,6 +629,12 @@ h3 {
 }
 
 @media (max-width: 680px) {
+    .maquina-escribir {
+      animation: none;
+      width: auto;
+      white-space: normal;
+      border-right: none;
+    }
     .section {
         padding: 72px 0;
     }
