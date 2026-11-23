@@ -54,7 +54,7 @@ main > .section + .section {
 }
 
 .section-alt {
-    background: rgba(17, 28, 46, 0.55);
+    background: var(--background);
 }
 
 .accent {
@@ -521,7 +521,6 @@ h3 {
     border: 1px solid var(--border);
     border-radius: 22px;
     background:
-        radial-gradient(ellipse at 100% 0%, rgba(111, 80, 200, 0.15), transparent 45%),
         var(--surface);
 }
 
